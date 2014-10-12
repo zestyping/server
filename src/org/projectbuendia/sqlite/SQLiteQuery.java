@@ -1,0 +1,45 @@
+package org.projectbuendia.sqlite;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+/**
+ * @author Pim de Witte
+ */
+public abstract class SQLiteQuery implements Item {
+	private final String sql;
+    private final long startTime;
+    public boolean sleepRequest = true;
+    
+
+	protected SQLiteQuery(String sql) {
+		this.sql = sql;
+        this.startTime = System.currentTimeMillis();
+	}
+
+    public final String getString(){
+        return this.sql;
+    }
+    public final long getStartTime(){
+        return this.startTime;
+    }
+
+	public abstract void execute(ResultSet result) throws SQLException;
+
+    public final boolean canExecute() {
+        return true;
+    }
+
+	@Override
+	public final boolean execute(SQLITEConnection connection) throws SQLException {
+		long startTime = System.currentTimeMillis();
+		ResultSet result = connection.executeQuery(sql);
+
+		if ((System.currentTimeMillis() - startTime) >= 2000) {
+			System.err.println("Query took: " + sql + ' ' + (System.currentTimeMillis() - startTime));
+		}
+		this.execute(result);
+        sleepRequest = false;
+		return true;
+	}
+}
