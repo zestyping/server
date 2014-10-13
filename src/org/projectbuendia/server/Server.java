@@ -18,6 +18,7 @@ import java.io.*;
 import java.net.UnknownHostException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.TimeZone;
 
 
@@ -25,6 +26,10 @@ import java.util.TimeZone;
  * Created by wwadewitte on 10/1/14.
  */
 public final class Server {
+
+    public static HashMap<Integer, String> zones = new HashMap<Integer, String>();
+    public static HashMap<Integer, String> tents = new HashMap<Integer, String>();
+
 
     private static ServerProperties systemProperties;
     public static ServerProperties getServerProperties() {

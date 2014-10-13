@@ -24,9 +24,9 @@ public class SharedFunctions {
                 "\"given_name\":" + (result.getString("given_name") != null ? "\""+result.getString("given_name")+"\"" :  "null") +","+
                 "\"family_name\":" + (result.getString("family_name") != null ? "\""+result.getString("family_name")+"\"" :  "null") +","+
                 "\"assigned_location\": { " +
-                "\"zone\":" + "\"tozone-"+result.getString("assigned_location_zone_id")+"\","+
-                "\"tent\":" + "\"tozone-"+result.getString("assigned_location_tent_id")+"\","+
-                "\"bed\":" + "\"tozone-"+result.getString("assigned_location_bed")+"\"" +
+                "\"zone\":" + result.getInt("assigned_location_zone_id")+","+
+                "\"tent\":" + result.getInt("assigned_location_tent_id")+","+
+                "\"bed\":" + result.getInt("assigned_location_bed") +
                 "},"+
                 "\"age\": { " +
                 "\"years\":" + result.getInt("age_years")+","+
