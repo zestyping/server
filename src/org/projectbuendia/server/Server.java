@@ -160,14 +160,6 @@ public final class Server {
             Logging.log("INFO", "The server was successfully restarted");
         }
 
-
-        /*for(int i = 0; i < 1000000; i ++) {
-            try {
-                throw new Exception();
-            } catch(Exception e) {
-                Logging.log("SEVERE", e);
-            }
-        }*/
     }
 
 }
