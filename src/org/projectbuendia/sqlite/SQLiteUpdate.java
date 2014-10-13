@@ -8,6 +8,7 @@ public final class SQLiteUpdate implements SQLiteItem {
 
 	public SQLiteUpdate(String sql) {
 		this.sql = sql;
+        System.out.println(sql);
 	}
 
 	@Override

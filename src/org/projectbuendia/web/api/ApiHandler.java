@@ -91,6 +91,9 @@ public abstract class ApiHandler extends HttpServlet {
         if(body != null) {
             String[] nodes = body.split(Pattern.quote("&"));
             for(String s : nodes) {
+                if(s.length() <= 1) {
+                    continue;
+                }
                 System.out.println("Node:" + s);
                 String[] keyValue = s.split(Pattern.quote("="));
                 payLoad.put(URLDecoder.decode(keyValue[0]), URLDecoder.decode(keyValue[1]));
