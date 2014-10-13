@@ -22,8 +22,33 @@ public class FilterPatients implements ApiInterface {
 
         final String[] responseText = new String[]{null};
 
+        StringBuilder whereString = new StringBuilder();
+        for(String s : parameterMap.keySet()) {
+            if(s.contains("limit") || s.contains("offset") || s.contains("order")) {
+                continue;
+            }
+            whereString.append(" AND `" + s + "` LIKE '%"+parameterMap.get(s)[0]+"%'");
+        }
+        String queryString = "" +
+                "SELECT * FROM `patients`" +
+                (!parameterMap.isEmpty() ?
+                        " WHERE 1=1"
+                        + whereString.toString()
+                        : ""
+                )
+                +
+                (parameterMap.containsKey("limit") && parameterMap.containsKey("offset")  ?
+                        " LIMIT " +parameterMap.get("offset")[0] + "," +parameterMap.get("limit")[0]
+                        :
+                        parameterMap.containsKey("limit") ? " LIMIT " + parameterMap.get("limit")[0]
+                                :
+                                /*parameterMap.containsKey("offset") ? " OFFSET " + parameterMap.get("offset")[0]
+                                        : todo(pim) figure out why this doesnt work, for now offset only works in combination with limit */"");
 
-        SQLiteQuery checkQuery = new SQLiteQuery("SELECT * FROM `patients`") {
+                ;
+
+        System.out.println(queryString);
+        SQLiteQuery checkQuery = new SQLiteQuery(queryString) {
 
             @Override
             public void execute(ResultSet result) throws SQLException {

@@ -6,7 +6,7 @@ import java.sql.SQLException;
 /**
  * @author Pim de Witte
  */
-public abstract class SQLiteQuery implements Item {
+public abstract class SQLiteQuery implements SQLiteItem {
 	private final String sql;
     private final long startTime;
     public boolean sleepRequest = true;
@@ -31,13 +31,18 @@ public abstract class SQLiteQuery implements Item {
     }
 
 	@Override
-	public final boolean execute(SQLITEConnection connection) throws SQLException {
+	public final boolean execute(SQLiteConnection connection) throws SQLException {
 		long startTime = System.currentTimeMillis();
 		ResultSet result = connection.executeQuery(sql);
 
 		if ((System.currentTimeMillis() - startTime) >= 2000) {
 			System.err.println("Query took: " + sql + ' ' + (System.currentTimeMillis() - startTime));
 		}
+        if(result == null) {
+            System.err.println(sql + " was null");
+            sleepRequest = false;
+            return true;
+        }
 		this.execute(result);
         sleepRequest = false;
 		return true;

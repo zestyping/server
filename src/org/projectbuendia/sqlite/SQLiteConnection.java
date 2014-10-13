@@ -7,14 +7,14 @@ import java.sql.*;
 /**
  * @author Pim de Witte
  */
-public final class SQLITEConnection {
+public final class SQLiteConnection {
 
     private final String url;
     private Connection connection;
     private Statement statement;
     private boolean connected;
 
-    public SQLITEConnection(String database) {
+    public SQLiteConnection(String database) {
         this.url = "jdbc:sqlite:"+database;
     }
 

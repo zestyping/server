@@ -9,8 +9,8 @@ import org.projectbuendia.logic.BackupThread;
 import org.projectbuendia.logic.LogicThread;
 import org.projectbuendia.mongodb.MongoConnectionProcessor;
 import org.projectbuendia.mongodb.MongoQuery;
-import org.projectbuendia.sqlite.ConnectionProcessor;
-import org.projectbuendia.sqlite.SQLITEConnection;
+import org.projectbuendia.sqlite.SQLiteConnectionProcessor;
+import org.projectbuendia.sqlite.SQLiteConnection;
 import org.projectbuendia.sqlite.SQLiteUpdate;
 import org.projectbuendia.web.JettyServer;
 
@@ -31,9 +31,9 @@ public final class Server {
         return systemProperties;
     }
     private static Calendar calendar = new GregorianCalendar();
-    private static ConnectionProcessor localDatabase;
+    private static SQLiteConnectionProcessor localDatabase;
 
-    public static ConnectionProcessor getLocalDatabase() {
+    public static SQLiteConnectionProcessor getLocalDatabase() {
         return localDatabase;
     }
     private static MongoConnectionProcessor mongoDatabase;
@@ -75,7 +75,7 @@ public final class Server {
         START SQLITE
 
          */
-        localDatabase  = new ConnectionProcessor(new SQLITEConnection(Config.SQLITE_PATH));
+        localDatabase  = new SQLiteConnectionProcessor(new SQLiteConnection(Config.SQLITE_PATH));
         localDatabase.start();
 
         //Logging.writeSampleErrors(10);

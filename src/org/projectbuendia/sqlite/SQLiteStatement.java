@@ -6,7 +6,7 @@ import java.sql.SQLException;
 /**
  * @author Pim de Witte
  */
-public abstract class SQLiteStatement implements Item {
+public abstract class SQLiteStatement implements SQLiteItem {
 	private final String sql;
     private final long startTime;
     private final Object[] params;
@@ -33,7 +33,7 @@ public abstract class SQLiteStatement implements Item {
     }
 
 	@Override
-	public final boolean execute(SQLITEConnection connection) throws SQLException {
+	public final boolean execute(SQLiteConnection connection) throws SQLException {
 		long startTime = System.currentTimeMillis();
 		ResultSet result = connection.executeStatement(sql, params);
 

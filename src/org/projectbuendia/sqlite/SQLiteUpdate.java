@@ -3,12 +3,11 @@ package org.projectbuendia.sqlite;
 /**
  * @author Pim de Witte
  */
-public final class SQLiteUpdate implements Item {
+public final class SQLiteUpdate implements SQLiteItem {
 	private final String sql;
 
 	public SQLiteUpdate(String sql) {
 		this.sql = sql;
-        System.out.println(sql);
 	}
 
 	@Override
@@ -17,7 +16,7 @@ public final class SQLiteUpdate implements Item {
 	}
 
 	@Override
-	public final boolean execute(SQLITEConnection connection) {
+	public final boolean execute(SQLiteConnection connection) {
 		long startTime = System.currentTimeMillis();
 		int result = connection.executeUpdate(sql);
 		if ((System.currentTimeMillis() - startTime) >= 5000) {

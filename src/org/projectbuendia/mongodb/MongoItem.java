@@ -2,7 +2,6 @@ package org.projectbuendia.mongodb;
 
 import com.mongodb.DB;
 import com.mongodb.MongoException;
-import org.projectbuendia.sqlite.SQLITEConnection;
 
 /**
  * @author Pim de Witte

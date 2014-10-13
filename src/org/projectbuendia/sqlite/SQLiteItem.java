@@ -5,7 +5,7 @@ import java.sql.SQLException;
 /**
  * @author Pim de Witte
  */
-public interface Item {
+public interface SQLiteItem {
 	boolean canExecute();
-	boolean execute(SQLITEConnection connection) throws SQLException;
+	boolean execute(SQLiteConnection connection) throws SQLException;
 }

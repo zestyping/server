@@ -1,8 +1,6 @@
 package org.projectbuendia.mongodb;
 
 import com.mongodb.*;
-import org.projectbuendia.sqlite.Item;
-import org.projectbuendia.sqlite.SQLITEConnection;
 
 /**
  * @author Pim de Witte

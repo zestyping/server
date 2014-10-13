@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 /**
  * @author Pim de Witte
  */
-public final class ConnectionProcessor implements Runnable {
+public final class SQLiteConnectionProcessor implements Runnable {
 
     static {
         try {
@@ -20,14 +20,14 @@ public final class ConnectionProcessor implements Runnable {
         }
     }
 
-    private final SQLITEConnection connection;
+    private final SQLiteConnection connection;
     private final Thread thread;
     private boolean running;
-    private final Queue<Item> items = new ConcurrentLinkedQueue<Item>();
+    private final Queue<SQLiteItem> items = new ConcurrentLinkedQueue<SQLiteItem>();
     private final Object lock = new Object();
 
 
-    public ConnectionProcessor(SQLITEConnection connection) {
+    public SQLiteConnectionProcessor(SQLiteConnection connection) {
         this.thread = new Thread(this);
         this.connection = connection;
     }
@@ -64,7 +64,7 @@ public final class ConnectionProcessor implements Runnable {
 
             while (!items.isEmpty()) {
                 //synchronized (lock) {
-                Item item = items.peek();
+                SQLiteItem item = items.peek();
                 if (!item.canExecute()) {
                     items.remove();
                     continue;
