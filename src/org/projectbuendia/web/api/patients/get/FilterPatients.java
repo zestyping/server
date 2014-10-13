@@ -23,17 +23,33 @@ public class FilterPatients implements ApiInterface {
         final String[] responseText = new String[]{null};
 
         StringBuilder whereString = new StringBuilder();
-        for(String s : parameterMap.keySet()) {
-            if(s.contains("limit") || s.contains("offset") || s.contains("order")) {
-                continue;
+
+        if(parameterMap.containsKey("search")) {
+            whereString.append( " WHERE `id` LIKE '%"+parameterMap.get("search")[0]+"%'");
+            whereString.append( " OR `given_name` LIKE '%"+parameterMap.get("search")[0]+"%'");
+            whereString.append( " OR `family_name` LIKE '%"+parameterMap.get("search")[0]+"%'");
+           /* whereString.append( " OR `important_information` LIKE '%"+parameterMap.get("search")[0]+"%'");
+            whereString.append( " OR `status` LIKE '%"+parameterMap.get("search")[0]+"%'");
+            whereString.append( " OR `origin` LIKE '%"+parameterMap.get("search")[0]+"%'");
+            whereString.append( " OR `assigned_location_zone_id` LIKE '%"+parameterMap.get("search")[0]+"%'");
+            whereString.append( " OR `assigned_location_tent_id` LIKE '%"+parameterMap.get("search")[0]+"%'");
+            whereString.append( " OR `assigned_location_bed` LIKE '%"+parameterMap.get("search")[0]+"%'");*/
+        } else {
+            for (String s : parameterMap.keySet()) {
+                if (s.contains("limit") || s.contains("offset") || s.contains("order")) {
+                    continue;
+                }
+                if(whereString.length() <= 0) {
+                    whereString.append(" WHERE `" + s + "` LIKE '%" + parameterMap.get(s)[0] + "%'");
+                } else {
+                    whereString.append(" AND `" + s + "` LIKE '%" + parameterMap.get(s)[0] + "%'");
+                }
             }
-            whereString.append(" AND `" + s + "` LIKE '%"+parameterMap.get(s)[0]+"%'");
         }
         String queryString = "" +
                 "SELECT * FROM `patients`" +
                 (!parameterMap.isEmpty() ?
-                        " WHERE 1=1"
-                        + whereString.toString()
+                        whereString.toString()
                         : ""
                 )
                 +

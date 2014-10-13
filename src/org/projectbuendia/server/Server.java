@@ -156,13 +156,13 @@ public final class Server {
         }
 
 
-        for(int i = 0; i < 1000000; i ++) {
+        /*for(int i = 0; i < 1000000; i ++) {
             try {
                 throw new Exception();
             } catch(Exception e) {
                 Logging.log("SEVERE", e);
             }
-        }
+        }*/
     }
 
 }
