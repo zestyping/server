@@ -13,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 /**
  * Created by wwadewitte on 10/11/14.
@@ -23,21 +24,45 @@ public class AddNewPatient implements ApiInterface {
 
         final String[] responseText = new String[]{null};
         final int[] lastId = new int[]{-1};
-        SQLiteQuery query = new SQLiteQuery("select count(1) from `patients`") {
+        SQLiteQuery query = new SQLiteQuery("SELECT `id`, count(1) FROM `patients` ORDER BY ROWID DESC LIMIT 1") {
 
             @Override
             public void execute(ResultSet result) throws SQLException {
-                while (result.next()) {
-                    lastId[0] = result.getInt("count(1)");
-                    System.out.println("got last id" + lastId[0]);
+                if(result == null) {
+
+                } else {
+                    while (result.next()) {
+                        if(result.getInt("count(1)") <= 0) {
+                            System.out.println("Empty result, inserting first");
+                            lastId[0] = 0;
+                            return;
+                        }
+                        System.out.println("ID IS:" + result.getString("id"));
+                        lastId[0] = Integer.parseInt(result.getString("id").split(Pattern.quote("."))[2]);
+                        System.out.println("got last id" + lastId[0]);
+                    }
                 }
             }
         };
+
+        /* we can only execute this once at a time because we are generating the UID*/
+
+        while(Server.isDoingPatient()) {
+            try {
+                System.out.println("Waiting;;;");
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        Server.setDoingPatient(true);
 
         Server.getLocalDatabase().executeQuery(query);
 
         while(lastId[0] == -1) {
             try {
+               /// System.out.println("Waiting.....");
                 Thread.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -93,6 +118,8 @@ public class AddNewPatient implements ApiInterface {
                 (payLoad.get("next_of_kin") != null ? ",'"+payLoad.get("next_of_kin") + "'" : "") +
                 ")"
         ));
+
+        Server.setDoingPatient(false);
 
         SQLiteQuery checkQuery = new SQLiteQuery("SELECT * FROM `patients` WHERE `id` = 'MSF.TS."+newId+"'  ") {
 

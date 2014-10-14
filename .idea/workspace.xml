@@ -7,23 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc3e6f4-13f6-4850-bcb0-54bc84f13a34" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/projectbuendia/web/api/flags/post/AddNewFlag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/projectbuendia/web/api/flags/get/FilterFlags.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/projectbuendia/web/api/Flags.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/install/dummydata.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/msf.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/get/ShowPatientFlags.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/get/ShowSpecificFlag.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server.jar" afterPath="$PROJECT_DIR$/Server.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/msf.db" afterPath="$PROJECT_DIR$/msf.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/post/AddNewPatient.java" afterPath="$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/post/AddNewPatient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/projectbuendia/web/api/ApiHandler.java" afterPath="$PROJECT_DIR$/src/org/projectbuendia/web/api/ApiHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/Error-v1-2014-Oct-13.log" afterPath="$PROJECT_DIR$/errors/Error-v1-2014-Oct-13.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/projectbuendia/web/JettyServer.java" afterPath="$PROJECT_DIR$/src/org/projectbuendia/web/JettyServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/projectbuendia/web/api/SharedFunctions.java" afterPath="$PROJECT_DIR$/src/org/projectbuendia/web/api/SharedFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/install/ddl.sql" afterPath="$PROJECT_DIR$/install/ddl.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors/Error-v1-2014-Oct-14.log" afterPath="$PROJECT_DIR$/errors/Error-v1-2014-Oct-14.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/get/FilterPatients.java" afterPath="$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/get/FilterPatients.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/projectbuendia/server/Server.java" afterPath="$PROJECT_DIR$/src/org/projectbuendia/server/Server.java" />
     </list>
     <ignored path="Server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,6 +46,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Server.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/server/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2235">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding>
+                <element signature="e#978#979#0" expanded="true" />
+                <element signature="e#1013#1014#0" expanded="true" />
+                <element signature="e#1069#1070#0" expanded="true" />
+                <element signature="e#1105#1106#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="JettyServer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/JettyServer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,31 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiHandler.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ApiHandler.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/ApiHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6687697" vertical-offset="926" max-vertical-offset="1560">
-              <caret line="100" column="17" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Patients.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/Patients.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Flags.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/Flags.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="1590">
+              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,6 +93,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AddNewPatient.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/post/AddNewPatient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7777778" vertical-offset="465" max-vertical-offset="2175">
+              <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="config.prop" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.prop">
           <provider selected="true" editor-type-id="text-editor">
@@ -118,31 +113,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="FilterPatients.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/get/FilterPatients.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.730769" vertical-offset="862" max-vertical-offset="1470">
+              <caret line="94" column="20" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddNewFlag.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/post/AddNewFlag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="dummydata.sql" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install/dummydata.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
               <caret line="0" column="84" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="112" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateSpecificPatient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/put/UpdateSpecificPatient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
-              <caret line="19" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilterFlags.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/flags/get/FilterFlags.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0384617" vertical-offset="0" max-vertical-offset="1305">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -164,8 +159,6 @@
         <option value="$PROJECT_DIR$/src/org/projectbuendia/sqlite/SQLITEItem.java" />
         <option value="$PROJECT_DIR$/src/org/projectbuendia/sqlite/SQLiteItem.java" />
         <option value="$PROJECT_DIR$/src/org/projectbuendia/sqlite/SQLiteQuery.java" />
-        <option value="$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/get/FilterPatients.java" />
-        <option value="$PROJECT_DIR$/src/org/projectbuendia/server/Server.java" />
         <option value="$PROJECT_DIR$/src/org/projectbuendia/sqlite/SQLiteUpdate.java" />
         <option value="$PROJECT_DIR$/install/dummydata.sql" />
         <option value="$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/flags/post/AddNewPatient.java" />
@@ -174,7 +167,10 @@
         <option value="$PROJECT_DIR$/src/org/projectbuendia/web/api/SharedFunctions.java" />
         <option value="$PROJECT_DIR$/install/ddl.sql" />
         <option value="$PROJECT_DIR$/src/org/projectbuendia/web/JettyServer.java" />
+        <option value="$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/get/FilterPatients.java" />
+        <option value="$PROJECT_DIR$/src/org/projectbuendia/server/Server.java" />
         <option value="$PROJECT_DIR$/src/org/projectbuendia/web/api/ApiHandler.java" />
+        <option value="$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/post/AddNewPatient.java" />
       </list>
     </option>
   </component>
@@ -304,6 +300,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="patients" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="projectbuendia" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="patients" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="post" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -794,12 +824,12 @@
       <created>1413157082103</created>
       <updated>1413157082103</updated>
       <workItem from="1413157082725" duration="12157000" />
-      <workItem from="1413235834636" duration="3918000" />
+      <workItem from="1413235834636" duration="5523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16075000" />
+    <option name="totallyTimeSpent" value="17680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="790" extended-state="6" />
@@ -825,7 +855,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32808024" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32808024" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -869,7 +899,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2415" max-vertical-offset="2565">
           <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -955,34 +990,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/post/AddNewFlag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/sqlite/SQLiteQuery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
           <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1623" max-vertical-offset="2160">
-          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/post/AddNewPatient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,14 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="660">
           <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/get/FilterPatients.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1440">
-          <caret line="38" column="57" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1098,6 +1101,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/post/AddNewFlag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2235">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1013#1014#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/JettyServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.6851852" vertical-offset="1361" max-vertical-offset="1770">
@@ -1110,8 +1134,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/ApiHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6687697" vertical-offset="926" max-vertical-offset="1560">
-          <caret line="100" column="17" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="1590">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/get/FilterPatients.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.730769" vertical-offset="862" max-vertical-offset="1470">
+          <caret line="94" column="20" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/projectbuendia/web/api/patients/post/AddNewPatient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7777778" vertical-offset="465" max-vertical-offset="2175">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
           <folding />
         </state>
       </provider>

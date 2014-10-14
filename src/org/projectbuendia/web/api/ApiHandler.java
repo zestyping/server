@@ -98,6 +98,8 @@ public abstract class ApiHandler extends HttpServlet {
                 String[] keyValue = s.split(Pattern.quote("="));
                 if(keyValue[1] != null) {
                     payLoad.put(URLDecoder.decode(keyValue[0]), URLDecoder.decode(keyValue[1]));
+                } else {
+
                 }
             }
         }

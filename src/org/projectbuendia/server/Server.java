@@ -27,9 +27,14 @@ import java.util.TimeZone;
  */
 public final class Server {
 
-    public static HashMap<Integer, String> zones = new HashMap<Integer, String>();
-    public static HashMap<Integer, String> tents = new HashMap<Integer, String>();
+    public static boolean doingPatient = false;
 
+    public static boolean isDoingPatient() {
+        return doingPatient;
+    }
+    public static void setDoingPatient(boolean value) {
+        doingPatient = value;
+    }
 
     private static ServerProperties systemProperties;
     public static ServerProperties getServerProperties() {

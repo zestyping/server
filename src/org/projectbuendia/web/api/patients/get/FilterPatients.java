@@ -20,6 +20,7 @@ public class FilterPatients implements ApiInterface {
     @Override
     public void call(final HttpServletRequest request, final HttpServletResponse response,final HashMap<String, String> urlVariables, final Map<String, String[]> parameterMap, final HashMap<String, String> payLoad){
 
+
         final String[] responseText = new String[]{null};
 
         StringBuilder whereString = new StringBuilder();
@@ -97,5 +98,6 @@ public class FilterPatients implements ApiInterface {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }
