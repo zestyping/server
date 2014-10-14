@@ -1,1 +1,0 @@
-insert into flags(`patient_id`,`status`, flag_type_id, flag_subtype_id) values ("MSF.TS.3", "confirmed", 2, -1);

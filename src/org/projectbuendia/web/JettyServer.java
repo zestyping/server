@@ -69,45 +69,5 @@ public class JettyServer {
         return null;
     }
 
-    public static final String[] zones = new String[] {
-        "triage",           //0
-        "suspect zone",     //1
-        "probable zone",    //2
-        "confirmed zone",   //3
-        "mortuary",         //4
-        "outisde",          //5
-    };
-
-    public static final Object[][] tents = new Object[][]{
-            /*
-            [0] = tent name
-            [1] = zone id
-            [2] = tent id
-             */
-            {"T1",1,1},
-            {"S1",2,1},
-            {"P1",3,1},
-            {"C1",4,1},
-        };
-
-    public static final String[] flag_types = new String[] {
-            "lab tests",           //0
-            "transfers",     //1
-            "hygiene",    //2
-            "feeding",   //3
-            "drugs"         //4
-    };
-
-    public static final Object[][] flag_subtypes = new Object[][] {
-            /*
-            [0] = subtype_name
-            [1] = flag id
-            [2] subtype_id
-             */
-            {"T1",1,1},
-            {"S1",2,1},
-            {"P1",3,1},
-            {"C1",4,1},
-    };
 
 }

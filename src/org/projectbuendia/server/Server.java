@@ -2,7 +2,9 @@ package org.projectbuendia.server;
 
 import com.mongodb.*;
 import org.projectbuendia.config.Config;
+import org.projectbuendia.config.DatabaseConfigs;
 import org.projectbuendia.config.ServerProperties;
+import org.projectbuendia.config.zones.Zone;
 import org.projectbuendia.fileops.FileChecks;
 import org.projectbuendia.fileops.Logging;
 import org.projectbuendia.logic.BackupThread;
@@ -36,6 +38,8 @@ public final class Server {
         doingPatient = value;
     }
 
+    public static HashMap<Integer, Zone> zones = new HashMap<Integer, Zone>();
+
     private static ServerProperties systemProperties;
     public static ServerProperties getServerProperties() {
         return systemProperties;
@@ -58,6 +62,10 @@ public final class Server {
     }
 
     public static final void main(String[] args) throws InterruptedException {
+
+        /*
+        Initialize logging and system properties
+         */
 
         systemProperties = new ServerProperties(Config.CONFIGURATION_FILE);
         ServerProperties.read();
@@ -109,7 +117,7 @@ public final class Server {
 
         /*
 
-        START MONGODB
+        Start mongodb if it's enabled and get a result to test
 
          */
 
@@ -146,10 +154,23 @@ public final class Server {
             });
 
         }
+
+        /* We load the all the database configs such as zones, tents, portals, flag_types, flag_subtypes*/
+
+        DatabaseConfigs.getDatabaseConfigs();
+
+
+
+
         /*
-        We start the logic threadd
+        We start the logic thread
          */
+
         logic.start();
+
+        /*
+        We start the backup thread
+         */
         backups.start();
 
 

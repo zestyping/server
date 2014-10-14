@@ -1,12 +1,14 @@
 CREATE TABLE IF NOT EXISTS flag_sub_types
 (
 flag_type_id INTEGER(6) DEFAULT 0 NOT NULL,
+flag_subtype_id INTEGER(6) DEFAULT 0 NOT NULL,
 name VARCHAR(25) NOT NULL)
 ;
 
 CREATE TABLE IF NOT EXISTS flag_types
-(id INTEGER(6),
-name VARCHAR(25) NOT NULL)
+(flag_type_id INTEGER(6),
+name VARCHAR(25) NOT NULL,
+PRIMARY KEY (id))
 ;
 
 CREATE TABLE IF NOT EXISTS flags
@@ -46,13 +48,16 @@ PRIMARY KEY (id))
 CREATE TABLE IF NOT EXISTS tents
 (
 zone_id INTEGER(6) NOT NULL,
+tent_id INTEGER(6) NOT NULL,
 name VARCHAR(25) NOT NULL,
 capacity INTEGER(6) DEFAULT -1)
 ;
 
 CREATE TABLE IF NOT EXISTS zones
 (
+zone_id INTEGER(6) NOT NULL,
 name VARCHAR(25) NOT NULL,
-capacity INTEGER(6) DEFAULT -1)
+capacity INTEGER(6) DEFAULT -1,
+PRIMARY KEY (zone_id))
 ;
 

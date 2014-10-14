@@ -38,6 +38,10 @@ public class LogicThread extends Thread {
     }
 
     public void performThreadActions() {
+        // zones
+        // tents
+        // flags
+        // flag subtypes
         //System.out.println("ticked at " + System.currentTimeMillis());
     }
 }
