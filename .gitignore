@@ -1,0 +1,6 @@
+*.class
+*.pyc
+.DS_Store
+errors
+msf.db
+out
